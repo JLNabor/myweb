@@ -1,0 +1,73 @@
+.main-body{
+    display: flex;
+    flex: row;
+    height: 100%;
+    width: 100%;
+    .col1-body{
+        width: 30%;
+        display: flex;
+        flex-flow: column;
+        height: 600px;
+        margin: 2%; 
+
+        ::ng-deep .mat-card{
+            background:#E6E6E6;
+        }
+
+        ::ng-deep .mat-card-header{
+        flex-direction:column;
+        align-items:center;
+        }
+
+        ::ng-deep .mat-card-avatar{
+            width: 140px;
+            height: 140px;
+        }
+
+        ::ng-deep .mat-card{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        ::ng-deep .mat-card-content{
+            margin-top: 10px;
+            margin-left: 25px;
+            margin-right: 25px;
+            font-family:Roboto,"Helvetica Neue",sans-serif;
+            font-size:15px;
+            text-align:justify;
+        }
+          
+        .example-header-image {
+            background-image: url('../../assets/img/yo.jpg');
+            background-size: cover;
+            margin-top: 5%;
+            margin-bottom: 3%;
+        }
+        
+        .main-social{
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            .main-social-col{
+                width: 25%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                .img-social{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    .col2-body{
+        width: 70%;
+        height:  400px;
+        display: flex;
+        flex-flow: column;
+        margin-top: 2%;
+        margin-right: 2%;
+    }
+}
