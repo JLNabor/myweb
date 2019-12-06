@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +12,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { ResumeComponent } from './resume/resume.component';
 import { MainBodyComponent } from './main-body/main-body.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,8 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     BodyComponent,
     ResumeComponent,
-    MainBodyComponent
+    MainBodyComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -26,14 +33,25 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatMenuModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   exports: [
     MatIconModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatListModule,
+    MatDialogModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [MatDialogModule],
+  entryComponents: [DialogBoxComponent, MainBodyComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
